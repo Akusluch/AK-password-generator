@@ -1,16 +1,14 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-// create the function here
-
+// generates random password based off 5 diffrent criteria represented at the let statements 
+function generatePassword() {
   password = "";
   var special = ['!','@','#','$','%','&'];
   var lower = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
   var upper = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
   var num = ['0','1','2','3','4','5','6','7','8','9'];
   var critcharset = [];
-
-function generatePassword() {
 
   let length = prompt("How many characters would you like your password. (min.8 max. 128)");
   let specialchar = confirm("Click OK to include special characters.");
@@ -42,13 +40,8 @@ function generatePassword() {
   return password;
 }
 
-// prompt to get the number of characters in password
-// need 4 ifs with 4 confirmExpressionconditionals
-// processing...
-// return password
-//   return "turtle"; // if turtle is a password
 
-// Write password to the #password input
+
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
